@@ -1,0 +1,28 @@
+<?php
+/**
+ * Jjcommerce_TrustpilotIntegration
+ *
+ * PHP version 5.x
+ *
+ * @category  PHP
+ * @package   Jjcommerce\TrustpilotIntegration
+ * @author    Sumit Verma <sumit@2jcommerce.in>
+ * @copyright 2017 Copyright 2J Commerce, Inc. http://www.2jcommerce.in/
+ * @license   http://www.2jcommerce.in/ Private
+ * @link      http://www.mickgeorge.com/
+ */
+$_product = $block->getProduct(); ?>
+<?php if($_product && $_product->getId()) { ?>
+    <?php $_width = $block->getWidth() ? $block->getWidth() : '58.4%'; ?>
+    <?php $_trustPilotHelper = $this->helper('Jjcommerce\TrustpilotIntegration\Helper\Data'); ?>
+    <?php $_businessUnitId = $_trustPilotHelper->getTrustPilotDataBusinessId() ?>
+    <?php $_templateId = $_trustPilotHelper->getTrustPilotListTemplateId() ?>
+    <?php $_trustPilotUrl = $_trustPilotHelper->getTrustPilotUrl() ?>
+    <?php $_productSku = $_product->getSku() ?>
+
+    <div class="trustpilot-reviews">
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="<?php echo $_templateId ?>" data-businessunit-id="<?php echo $_businessUnitId ?>" data-style-height="33px" data-style-width="<?php echo $_width ?>" data-sku="<?php echo $_productSku ?>">
+            <a href="<?php echo $_trustPilotUrl ?>" target="_blank">Trustpilot</a>
+        </div>
+    </div>
+<?php } ?>

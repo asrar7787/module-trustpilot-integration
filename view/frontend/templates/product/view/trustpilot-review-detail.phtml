@@ -1,0 +1,29 @@
+<?php
+/**
+ * Jjcommerce_TrustpilotIntegration
+ *
+ * PHP version 5.x
+ *
+ * @category  PHP
+ * @package   Jjcommerce\TrustpilotIntegration
+ * @author    Sumit Verma <sumit@2jcommerce.in>
+ * @copyright 2017 Copyright 2J Commerce, Inc. http://www.2jcommerce.in/
+ * @license   http://www.2jcommerce.in/ Private
+ * @link      http://www.mickgeorge.com/
+ */
+$_product = $block->getProduct(); ?>
+<?php if($_product && $_product->getId()): ?>
+	<?php $_trustPilotHelper = $this->helper('Jjcommerce\TrustpilotIntegration\Helper\Data'); ?>
+	<?php $_businessUnitId = $_trustPilotHelper->getTrustPilotDataBusinessId() ?>
+	<?php $_templateId = $_trustPilotHelper->getTrustPilotDetailPageTemplateId() ?>
+	<?php $_trustPilotUrl = $_trustPilotHelper->getTrustPilotUrl() ?>
+	<?php $_productSku = $_product->getSku() ?>
+	<div id="trustpilot-detail-reviews" class="detailed-reviews">
+		<!-- TrustBox widget -->
+		<div class="trustpilot-widget" data-locale="en-US" data-template-id="<?php echo $_templateId ?>" data-businessunit-id="<?php echo $_businessUnitId ?>" data-style-height="500px" data-style-width="100%" data-stars="5">
+			<a href="<?php echo $_trustPilotUrl ?>" target="_blank">Trustpilot</a>
+		</div>
+		<!-- End TrustBox widget -->
+	</div>
+<?php endif; ?>
+

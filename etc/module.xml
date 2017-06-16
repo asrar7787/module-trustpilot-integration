@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Jjcommerce_TrustpilotIntegration
+ *
+ * PHP version 5.x
+ *
+ * @category  XML
+ * @package   Jjcommerce\TrustpilotIntegration
+ * @author    Sumit Verma <sumit@2jcommerce.in>
+ * @copyright 2017 Copyright 2J Commerce, Inc. http://www.2jcommerce.in/
+ * @license   http://www.2jcommerce.in/ Private
+ * @link      http://www.mickgeorge.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Jjcommerce_TrustpilotIntegration" setup_version="2.0.0">
+        <sequence>
+            <module name="Magento_Catalog" />
+        </sequence>
+    </module>
+</config>

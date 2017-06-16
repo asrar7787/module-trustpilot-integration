@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Jjcommerce_TrustpilotIntegration
+ *
+ * PHP version 5.x
+ *
+ * @category  XML
+ * @package   Jjcommerce\TrustpilotIntegration
+ * @author    Sumit Verma <sumit@2jcommerce.in>
+ * @copyright 2017 Copyright 2J Commerce, Inc. http://www.2jcommerce.in/
+ * @license   http://www.2jcommerce.in/ Private
+ * @link      http://www.mickgeorge.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="trustpilot" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>TrustPilot Integration</label>
+            <tab>jjcommerce</tab>
+            <resource>Jjcommerce_TrustPilot::configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="is_active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Trust Pilot Reviews</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>TrustPilot Url</label>
+                    <comment>Please Enter TrustPilot Store's URL Here.</comment>
+                </field>
+                <field id="data_businessunit_id" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Business Id</label>
+                    <comment>Please Enter TrustPilot Business Id Here.</comment>
+                </field>
+            </group>
+            <group id="list_review" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Listing Page Setting</label>
+                <field id="data_template_id" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Template Id</label>
+                    <comment>Please Enter Widget Template Id Here.</comment>
+                </field>                
+            </group>
+            <group id="detail_page_review" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Detail Page Setting</label>
+                <field id="data_template_id" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Template Id</label>
+                    <comment>Please Enter Widget Template Id Here.</comment>
+                </field>                
+            </group>
+        </section>
+    </system>
+</config>
