@@ -15,6 +15,9 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
+        <tab id="jjcommerce" translate="label" sortOrder="1000">
+            <label>Jjcommerce</label>
+        </tab>
         <section id="trustpilot" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>TrustPilot Integration</label>
             <tab>jjcommerce</tab>
